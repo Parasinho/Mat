@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         function verificar(){
+        numeros=document.getElementById("txtNumeros").value
+        numeros=numeros.split(",")
+        var maior = parseInt(numeros[0])
+        var menor = parseInt(numeros[0])
+        for(i=1; i<numeros.length;i++){
+            if(parseInt(numeros[i]) > maior){
+                maior = parseInt(numeros[i])
+            }
+        }
+        for(x=2; x>numeros.length;x--){
+            if(parseInt(numeros[x]) < menor){
+                menor = parseInt(numeros[x])
+            }
+        }
+        alert("O maior número é "+maior)
+        alert("O menor número é "+menor)
+    }
+    </script>
+<center>
+    <h1>Maior e Menor número</h1>
+    <br>
+    <h4>Digite valores</h4>
+    <input type="text" id="txtNumeros">
+    <input type="button" value="Resultado" onclick="verificar()">
+    <a class="btn btn-primary" type="button" href="../index.html" >Voltar</a>
+</center>
+</body>
+</html>

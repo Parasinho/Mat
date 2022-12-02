@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        function exibir(){
+            document.getElementById('res').innerHTML = "";
+            var num = document.getElementById('v1').value
+
+            for (var i = 0; i <= 5000; i++, i++){
+            var t = document.createTextNode(i + "-")
+            document.getElementById('res').appendChild(t)
+            }
+        }
+    </script>
+    <h1></h1>
+    <center>
+    <h1>Números de 1 a 5000</h1><br><br>
+    <form action="" method="post">
+        <input type="button" value="Mostrar" id="v1" class="btn btn-success" onclick="exibir()">
+        <input class="btn btn-danger" type="button" value="Limpar" onclick="window.location.reload()">
+        <a class="btn btn-primary" type="button" href="../index.html" >Voltar</a><br><br><br>
+        <br><br>
+        <h3 id="res"></h3>
+    </form>
+    </center>
+    
+</body>
+</html>

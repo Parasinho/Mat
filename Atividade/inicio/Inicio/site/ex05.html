@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        function calcular(){
+            var comprimento=(document.getElementById('comprimento').value)
+            var largura=(document.getElementById('largura').value)
+            var total=("R$ "+(comprimento*largura)*36+",00")
+
+            document.getElementById('total').innerHTML="O custo será de:"+total
+        }
+    </script>
+
+    <center><h1>Custo Para Assentar Piso</h1>
+    <br><br>
+    <div class="container">
+    <div class="box1">
+    <form action="" method="post">
+        Digite o comprimento em metros: <input class="form-control" type="text" id="comprimento"><br>
+        Digite a largura em metros:<input class="form-control" type="text" id="largura"><br>
+        
+    </form>
+  </div>
+    <br>
+    <br>
+    <input class="btn btn-dark" type="button" onclick="calcular()" value="Calcular"><br><br><br>
+    <a class="btn btn-primary" type="button" href="../index.html" >Voltar</a>
+   
+    <h2 id="total"></h2>
+   
+</center><br><br><br>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Document</title>
+</head>
+<body>
+
+
+
+    <script>
+        function calcular()
+        {
+            var sex=document.getElementById('sexo').value;
+            var alt=document.getElementById('altura').value;
+            if (sex == "Feminino" || sex == "feminino"){
+                document.getElementById('resultado').innerHTML= "Seu peso ideal será: "+((62.1*alt)-44.7+"Kg");
+            }else if(sex == "Masculino" || sex == "maculino"){
+                document.getElementById('resultado').innerHTML="Seu peso ideal será: "+((72.7*alt)-58+"Kg");
+            }
+        }
+    </script>
+<center>
+    <h1>IMC</h1><br><br>
+    <div class="container2">
+    <form action="" method="post">
+        Digite seu sexo: <input class="form-control" type="text" id="sexo"><br><br>
+        Digite sua altura: <input class="form-control" type="text" id="altura" onblur="calcular()"><br><br><br>
+        <input class="btn btn-dark" type="button" onclick="calcular()" value="Calcular"><br><br><br><br>
+        <a class="btn btn-primary" type="button" href="../index.html" >Voltar</a>
+    </form>
+  </div>
+    <br>
+    <h2 id="resultado"></h2>
+    
+</body>
+</html>

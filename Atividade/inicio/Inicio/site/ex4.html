@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        function calcular()
+        {
+            var Km=document.getElementById('Km').value;
+            var preço=document.getElementById('preço').value;
+            var resultado=((Km/8)*preço)
+            document.getElementById('resultado').innerHTML="R$ "+resultado
+        }
+    </script>
+        <center>
+            <h1>PREÇO POR LITRO</h1><br><br><br>
+            <div class="container2">
+            <form action="" method="post">
+                Digite a quantidade de Km percorrido: <input class="form-control" type="text" id="Km"><br><br>
+                Digite o preço do combustivel: <input class="form-control" type="text" id="preço" onblur="calcular()"><br><br>
+                <input class="btn btn-dark" type="button" onclick="calcular()" value="Calcular">
+                <a class="btn btn-primary" type="button" href="../index.html" >Voltar</a>
+            </form>
+          </div>
+            <br><br><br>
+            <h1>O preço por Litro será:</h1><br>
+            <h2 id="resultado"></h2>
+          
+        </center>
+</body>
+</html>
